@@ -1,0 +1,22 @@
+method:post
+url:http://127.0.0.1:8000/api/reg/
+data:{
+  "username": "anurags",
+  "email": "anu@gmail.com",
+  "password": qwerty@123
+  "first_name": "anu",
+  "last_name": "anu"
+}
+==============================================================================
+
+method:get
+url:http://127.0.0.1:8000/api/todos/
+data:nil
+================================================================================
+
+method:post
+url:http://127.0.0.1:8000/api/todos/
+data: "task_name": "task11",
+  "task_description": "hai",
+===================================================================================
+

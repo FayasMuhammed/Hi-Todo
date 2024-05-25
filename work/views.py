@@ -132,3 +132,16 @@ class Edit_userview(View):
         data=User.objects.get(id=id)
         form=Register(instance=data)
         return render(request,"edit_user.html",{"form":form})
+    
+    def post(self,request,**kwargs):
+        id=kwargs.get("pk")
+        data=User.objects.get(id=id)
+        form=Register(request.POST,instance=data)
+        if form.is_valid():
+            form.save()
+        return redirect("task")
+
+
+class Firstpage_view(View):
+    def get(self,request,**kwargs):
+        return render(request,"firstpage.html")
